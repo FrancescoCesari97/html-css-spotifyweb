@@ -30,6 +30,14 @@ a{
     color: inherit;
 }
 
+h2{
+    color: aliceblue;
+}
+
+h3{
+    color: aliceblue;
+}
+
 
 /* utlis */
 
@@ -55,9 +63,9 @@ a{
     /* PALLETE */
     --navbar-color: black;
     --footer-color:#282828;
-    --header-color:#00000020;
+    --header-color:#00000044;
     --main-color:#141922;
-    --text-primary-color:aliceblue;
+    --text-primary-color:rgba(240, 248, 255, 0.552);
 
     /* LAYOUT */
     --player-height:100px;
@@ -123,6 +131,7 @@ a{
 
 .playlist-list h4{
     padding-bottom: 20px;
+    color: aliceblue;
 }
 
 
@@ -180,6 +189,10 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
     margin-right: 10px;
 }
 
+.utente h4 {
+    color: aliceblue;
+}
+
 
 
 
@@ -211,7 +224,7 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
 /* effetua-upgrade */
 
 #App-top-bar span{
-    
+    color: aliceblue;
     line-height: 98px;
     padding: 12px 35px;
     border: 2px solid white;
@@ -225,7 +238,64 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
     height: calc(100% - var(--main-top-bar-height));
     overflow: auto;
     padding-top: var(--main-top-bar-height);
+    
 }
+
+/* lista-categoria */
+
+.lista-categoria{
+    text-align: center;
+}
+
+.lista-categoria li{
+    font-size: 13px;
+    padding:  25px;
+}
+
+/* recently-played */
+
+.recently-played{
+    padding: 25px;
+}
+
+.recently-played h2{
+    padding-bottom: 25px;
+}
+
+.recently-played-Tracks{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.track{
+    width: calc(100% / 6 - 30px) ;
+    text-align: center;
+}
+
+.track p{
+   font-size: 13px;
+}
+
+/* per-john-doe */
+
+.per-john-doe{
+    padding: 25px;
+
+}
+
+.per-john-doe p{
+    padding: 15 0;
+}
+
+.per-john-doe-track{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-top: 30px;
+}
+
+
 
 
 /* FOOTER */
