@@ -17,6 +17,8 @@ ul{
 
 body{
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    background-color: var(--main-color);
+    color: var(--text-primary-color);
 }
 
 li{
@@ -44,4 +46,53 @@ a{
     min-height: 80px;
     background-color: rgb(216, 163, 98);
     padding: 2rem;
+}
+
+
+/* CUSTOM PROP */
+
+:root{
+    /* PALLETE */
+    --navbar-color: black;
+    --footer-color:#282828;
+    --header-color:#080b12;
+    --main-color:#141922;
+    --text-primary-color:aliceblue;
+
+    /* LAYOUT */
+    --player-height:100px;
+    --navbar-width:200px;
+
+}
+
+
+/* APP TOP */
+
+#App_top{
+    height: calc(100vh - var(--player-height));
+
+    display: flex;
+}
+
+
+
+/* APP PLAYER */
+
+#App_player{
+    background-color: var(--footer-color);
+    height: var(--player-height);
+}
+
+/* APP NAVBAR */
+
+#App-navbar{
+    width: var(--navbar-width);
+    background-color: var(--navbar-color);
+}
+
+
+/* PLAYLIST */
+
+#Playlists{
+    flex-grow: 1;
 }
