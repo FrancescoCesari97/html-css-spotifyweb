@@ -55,13 +55,14 @@ a{
     /* PALLETE */
     --navbar-color: black;
     --footer-color:#282828;
-    --header-color:#080b12;
+    --header-color:#00000020;
     --main-color:#141922;
     --text-primary-color:aliceblue;
 
     /* LAYOUT */
     --player-height:100px;
     --navbar-width:200px;
+    --main-top-bar-height:100px;
 
 }
 
@@ -88,11 +89,38 @@ a{
 #App-navbar{
     width: var(--navbar-width);
     background-color: var(--navbar-color);
+    flex-shrink: 0;
 }
 
 
-/* PLAYLIST */
+/* APP NAVBAR RESPONSIVE */
 
-#Playlists{
+@media all and (max-width: 768px){
+    :root{
+        --navbar-width:100px;
+    }
+}
+
+/* APP MAIN */
+
+#App-main{
     flex-grow: 1;
+    overflow: auto;
+}
+
+
+#App-top-bar{
+    height:var(--main-top-bar-height) ;
+    background-color: var(--header-color);
+    position: fixed;
+    width: calc(100% - var(--navbar-width));
+   
+
+
+}
+
+#App-playlists{
+    height: calc(100% - var(--main-top-bar-height));
+    overflow: auto;
+    padding-top: var(--main-top-bar-height);
 }
