@@ -77,12 +77,6 @@ a{
 
 
 
-/* APP PLAYER */
-
-#App_player{
-    background-color: var(--footer-color);
-    height: var(--player-height);
-}
 
 /* APP NAVBAR */
 
@@ -90,7 +84,89 @@ a{
     width: var(--navbar-width);
     background-color: var(--navbar-color);
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
 }
+
+.logo img{
+    padding: 15px 15px 30px 15px;
+    width: 170px;
+}
+
+.research-list li{
+    display: block;
+    padding: 5px 15px;
+    line-height: 39px;
+}
+
+.playlist-list{
+    padding: 0 15px;
+    padding-top: 25PX;
+    
+}
+
+.playlist-list h4{
+    padding-bottom: 20px;
+}
+
+.research-list img{
+    width: 30px;
+    padding-right: 5px;
+}
+
+.playlist-list span {
+    line-height: 10px;
+}
+
+.playlist-list li{
+    line-height: 40px;
+    font-size: 14px;
+    display: block;
+    overflow: scroll;
+}
+
+.playlist-list li:nth-child(1){
+    font-size: 18px;
+}
+
+
+.playlist-list img{
+  width: 40px;
+  padding-right: 5px;
+  
+}
+
+.installa-app{
+    padding: 0 10px;
+    margin-top: auto;
+
+}
+.installa-app p{
+    padding-bottom: 10px;
+border-bottom: 2px solid rgba(255, 255, 255, 0.356);
+}
+
+
+.installa-app img{
+    width: 20px;
+    vertical-align:middle;
+
+}
+
+.utente{
+    padding: 15px 15px;
+}
+
+.utente img{
+    width: 25px;
+    height: 25px;
+    background-color: #808080;
+    border-radius: 50%;
+    vertical-align:middle;
+    margin-right: 10px;
+}
+
+
 
 
 /* APP NAVBAR RESPONSIVE */
@@ -114,13 +190,23 @@ a{
     background-color: var(--header-color);
     position: fixed;
     width: calc(100% - var(--navbar-width));
-   
-
-
+    
+    
+    
 }
 
 #App-playlists{
     height: calc(100% - var(--main-top-bar-height));
     overflow: auto;
     padding-top: var(--main-top-bar-height);
+}
+
+
+/* FOOTER */
+
+/* APP PLAYER */
+
+#App_player{
+    background-color: var(--footer-color);
+    height: var(--player-height);
 }
