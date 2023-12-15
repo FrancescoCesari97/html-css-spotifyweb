@@ -116,8 +116,12 @@ h3{
     display: block;
     padding: 5px 15px;
     line-height: 39px;
+    
 }
 
+.research-list a{
+    color: var(--text-primary-color);
+}
 
 
 .research-list img{
@@ -195,6 +199,8 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
     width: 20px;
     vertical-align:middle;
     margin-right: 10px;
+    color: var(--text-primary-color);
+    margin-left: 5px;
 
 }
 
@@ -225,6 +231,20 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
 }
 
 
+/* APP NAVBAR HOVER */
+
+.playlist-list li:hover{
+    color: aliceblue;
+}
+
+.installa-app p:hover{
+    color: aliceblue;
+}
+
+.research-list a:hover{
+    color: aliceblue;
+}
+
 
 
 /* APP NAVBAR RESPONSIVE */
@@ -238,6 +258,8 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
         display: none;
 
     }
+
+    
 
     .research-list{
         text-align: center;
@@ -261,7 +283,7 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
     }
 
     .installa-app{
-        padding: 0;
+        padding-left: 0;
         
     }
 
@@ -377,10 +399,40 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
 .track{
     width: calc(100% / 6 - 30px) ;
     text-align: center;
+   
+}
+
+.track-img{
+    position: relative;
+}
+
+.track-img .fa-play{
+    position: absolute;
+    right: calc(50% - 11px);
+    top: calc(50% - 15px);
+    color: aliceblue;
+    font-size: 30px;
+    display: none;
 }
 
 .track p{
    font-size: 13px;
+}
+
+/* recently-played hover */
+
+.lista-categoria li:hover{
+    color: aliceblue;
+}
+
+.track-img img:hover{
+    position: relative;
+    opacity: 0.5;
+}
+
+.track-img .fa-play:hover{
+    
+    display: block;
 }
 
 /* recently-played responsive */
@@ -451,7 +503,9 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
     height: var(--player-height);
     display: flex;
     justify-content: space-between;
-    
+    padding: 15px;
+    position: fixed;
+    width: 100%;
 }
 
 /* App_player-left */
@@ -459,12 +513,12 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
 .App_player-left{
     flex: 2 0 25%;
     display: flex;
-    padding: 20px;
+    
 }
 
 .img-name{
     display: flex;
-    flex: 0 0 50%;
+    
    align-items: center;
 }
 
@@ -489,19 +543,30 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
 }
 
 .icone-cartelle{
-    flex: 0 1 50%;
-    display: flex;
-    align-items: center;
+    min-width: 50px;
+    line-height: 77px;
+    text-align: center;
 }
 
-.icone-cartelle i{
-    padding: 5px 15px 5px 0;
+/* App_player-left hover */
+
+
+.icone-cartelle i:hover{
+    color: aliceblue;
 }
+
+
+
+
+
 /* App_player-left responsive */
 
 @media all and (max-width: 900px){
     .icone-cartelle{
        flex-direction: column;
+       align-items: flex-end;
+       justify-content: center;
+      
     }
 }
 
@@ -509,9 +574,9 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
 /* App_player-center */
 
 .App_player-center{
-    flex: 0 2 40%;
+    flex: 0 2 50%;
     
-    padding: 20px;
+    
 }
 
 .play-button{
@@ -550,11 +615,36 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
     height: 3px;
     background-color: var(--text-primary-color);
     border-radius: 3px;
+    position: relative;
+}
+
+.white-dot{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    position: absolute;
+    right: 0;
+    top: -1px;
+    display: none;
 }
 
 .time-bar p{
  font-size: 12px;
 }
+
+
+/* App_player-center hover */
+
+.time-passed:hover{
+   
+    background-color: lightgreen;
+   
+}
+.time-passed:hover .white-dot{
+    display: block;
+}
+
 
 
 /* App_player-right */
@@ -565,8 +655,10 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
     justify-content: flex-end;
     align-items: center;
     font-size: 12px;
-    padding: 20px;
+    
 }
+
+
 
 .volume{
     flex: 0 0 40%;
@@ -576,8 +668,7 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
 }
 
 .App_player-right-icons i{
-    flex: 0 0 60%;
-    padding: 10px;
+    padding: 5px;
 }
 
 .level-volume{
@@ -588,13 +679,27 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
 }
 
 
+/* App_player-right hover*/
+
+.level-volume:hover{
+    
+    background-color: lightgreen;
+    
+}
+
+.App_player-right-icons i:hover{
+    color: aliceblue;
+}
+
+
 /* footer responsive */
 
 @media all and (max-width: 700px){
     .icone-cartelle{
        flex-direction: column;
        align-items: end;
-       min-width: 97px;
+       
+       justify-content: center;
 }
 .App_player-right,
 .App_player-right{
