@@ -237,6 +237,10 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
     color: aliceblue;
 }
 
+.playlist-list li:hover i{
+    color: aliceblue;
+}
+
 .installa-app p:hover{
     color: aliceblue;
 }
@@ -406,13 +410,21 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
     position: relative;
 }
 
-.track-img .fa-play{
-    position: absolute;
-    right: calc(50% - 11px);
-    top: calc(50% - 15px);
+.fa-circle-play{
     color: aliceblue;
-    font-size: 30px;
+    font-size: 45px;
+}
+
+.hover-img{
     display: none;
+    position: absolute;
+    background-color: rgba(0,0,0, 0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .track p{
@@ -425,14 +437,10 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
     color: aliceblue;
 }
 
-.track-img img:hover{
-    position: relative;
-    opacity: 0.5;
-}
 
-.track-img .fa-play:hover{
+.track-img:hover .hover-img{
     
-    display: block;
+    display: flex;
 }
 
 /* recently-played responsive */
@@ -491,6 +499,12 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
 .Artisti-più-ascoltati-track .track-img img{
     border-radius: 50%;
 
+}
+
+/* Artisti-più-ascoltati hover */
+
+ .track-img:hover .round{
+    border-radius: 50%;
 }
 
 
@@ -574,7 +588,7 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
 /* App_player-center */
 
 .App_player-center{
-    flex: 0 2 50%;
+    flex: 0 2 40%;
     
     
 }
@@ -588,12 +602,18 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
 .play-button i{
     font-size: 20px;
     color: aliceblue;
+    line-height: 27px;
+}
+
+.play-button .fa-play-hover{
+    font-size: 30px;
+    display: none;
 }
 
 .play-button i:nth-child(3){
-   font-size: 25px;
-   position: relative;
-   bottom: 2px;
+   font-size: 30px;
+  
+   
 }
 
 .time-bar{
@@ -645,7 +665,19 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
     display: block;
 }
 
+.play-button .fa-play:hover{
+    display: none;
+}
 
+.play-button .fa-play-hover:hover {
+    display: inline;
+}
+
+.play-button i:nth-child(3):hover{
+    font-size: 35px;
+   
+    
+ }
 
 /* App_player-right */
 
@@ -691,14 +723,21 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
     color: aliceblue;
 }
 
+.name-song p:hover{
+    text-decoration: underline;
+}
+
+
+
 
 /* footer responsive */
 
 @media all and (max-width: 700px){
     .icone-cartelle{
+
+       
        flex-direction: column;
        align-items: end;
-       
        justify-content: center;
 }
 .App_player-right,
