@@ -94,6 +94,7 @@ h3{
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
+    overflow: auto;
 }
 
 /* LOGO */
@@ -140,6 +141,11 @@ h3{
 .playlist-list h4{
     padding-bottom: 20px;
     color: aliceblue;
+}
+
+.playlist-list ul{
+    overflow: auto;
+    min-height: 100px;
 }
 
 
@@ -382,7 +388,28 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
 .lista-categoria li{
     font-size: 13px;
     padding:  25px;
+    border-bottom: 2px solid var(--header-color);
 }
+
+.lista-categoria li:hover{
+    
+    border-bottom: 2px solid lightgreen;
+}
+
+
+.lista-categoria li::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 30px;
+    height: 3px;
+    background-color: lightgreen;
+}
+
+
 
 /* recently-played */
 
@@ -735,9 +762,9 @@ border-bottom: 2px solid rgba(255, 255, 255, 0.356);
 @media all and (max-width: 700px){
     .icone-cartelle{
 
-       
+       display: flex;
        flex-direction: column;
-       align-items: end;
+       align-items: center;
        justify-content: center;
 }
 .App_player-right,
